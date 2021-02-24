@@ -17,9 +17,15 @@ CG1_ActiveEdgeTable::~CG1_ActiveEdgeTable()
 
 //--------------------------------------------------------------------
 
+bool compare(const CG1_Edge* first, const CG1_Edge* second)
+{
+    return first->Current_X < second->Current_X;
+}
+
 void CG1_ActiveEdgeTable::Add(CG1_Edge *Edge)
 {
-	// ZELF IMPLEMENTEREN
+    // ZELF IMPLEMENTEREN
+	ActiveEdges.push_back(Edge);
 }
 
 //--------------------------------------------------------------------
@@ -31,8 +37,9 @@ void CG1_ActiveEdgeTable::Add(CG1_EdgeTableRow *EdgeRow)
 	{
 		CurrentEdge = *(EdgeRow->EdgeIterator);					
 		CurrentEdge->Current_X = (float)CurrentEdge->x_down;	// initializeren op de laagste waarde
-		Add(CurrentEdge);										// MOET JE ZELF IMPLEMENTEREN
+		Add(CurrentEdge);									// MOET JE ZELF IMPLEMENTEREN
 	}
+    ActiveEdges.sort(compare);
 }
 
 //--------------------------------------------------------------------
@@ -61,6 +68,11 @@ void CG1_ActiveEdgeTable::Writedata(int y_value)
 void CG1_ActiveEdgeTable::Update_CurrentX_Values()
 {
 	// ZELF IMPLEMENTEREN
+    for (ActiveEdgeIterator = ActiveEdges.begin(); ActiveEdgeIterator != ActiveEdges.end(); ActiveEdgeIterator++)
+    {
+        CG1_Edge* current = *ActiveEdgeIterator;
+        current->Current_X += current->Reversed_M;
+    }
 }
 
 //--------------------------------------------------------------------
@@ -68,6 +80,19 @@ void CG1_ActiveEdgeTable::Update_CurrentX_Values()
 void CG1_ActiveEdgeTable::RemoveObsoleteEdges(int y)
 {
 	// ZELF IMPLEMENTEREN
+    for (ActiveEdgeIterator = ActiveEdges.begin(); ActiveEdgeIterator != ActiveEdges.end();)
+    {
+        CG1_Edge* current = *ActiveEdgeIterator;
+        int ymax = max(current->y_down, current->y_up);
+        if (ymax == y)
+        {
+            ActiveEdgeIterator = ActiveEdges.erase(ActiveEdgeIterator);
+        }
+        else
+        {
+            ActiveEdgeIterator++;
+        }
+    }
 }
 
 //--------------------------------------------------------------------

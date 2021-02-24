@@ -24,14 +24,13 @@ public:
 	CG1_EdgeTableRow* GetEdgeTableRow(int y_value);
 	void Initialize(CG1_2DPolygon* Polygon);
 	CG1_EdgeTable();
+	vector<CG1_EdgeTableRow*> EdgeTableRows;
 	virtual ~CG1_EdgeTable();
 
 private:
 	void AddEdge(CG1_Edge* edge);
 	int MinimumY;
 	int MaximumY;
-
-	vector<CG1_EdgeTableRow*> EdgeTableRows;
 	vector<CG1_EdgeTableRow*>::iterator EdgeTableRowIterator;
 };
 

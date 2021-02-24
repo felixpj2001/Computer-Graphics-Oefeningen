@@ -1,4 +1,5 @@
 #include "CG1_DrawTool.h"
+#include "CG1_2DPolygon.h"
 #include "CG1_2DVector.h"
 #include "CG1_EdgeTable.h"
 #include "CG1_ActiveEdgeTable.h"
@@ -34,24 +35,24 @@ void CG1_DrawTool::DrawData()
 	// (= FUNCTIES AANROEPEN DIE BEPAALDE DINGEN TEKENEN )
 
 	// VOORBEELDEN:
-	CG1_Line line;
-	line.SetData(10,10,50,100);
-	if(CyrusBeckClip(&line))
-	{
-		DrawDDALine(line, RGB_Color(1.0,0.0,0.0));
-	}
+	// CG1_Line line;
+	// line.SetData(10,10,50,100);
+	// if(CohenSutherLandClip(&line))
+	// {
+	// 	DrawDDALine(line, RGB_Color(1.0,0.0,0.0));
+	// }
 	//DrawMidPointLine(CG1_Line(-10,-10,-50,100), RGB_Color(1.0,1.0,0.0));
 	//DrawMidPointCircle(10,10, 50, RGB_Color(0.0,0.0,1.0));
 	//DrawSecondOrderMidPointCircle(-10,10, 50, RGB_Color(0.0,1.0,0.0));
 	
-	//CG1_Polygon MyPolygon;
-	//MyPolygon.AddPoint(CG1_2DVector(55.0, 50.0));
-	//MyPolygon.AddPoint(CG1_2DVector(100.0, 15.0));
-	//MyPolygon.AddPoint(CG1_2DVector(25.0, -5.0));
-	//MyPolygon.AddPoint(CG1_2DVector(20.0, 5.0));
-	//MyPolygon.AddPoint(CG1_2DVector(-10.0, -5.0));
-
-	//FillPolygon(&MyPolygon, RGB_Color(0.0,1.0,1.0));
+	CG1_2DPolygon MyPolygon;
+	MyPolygon.AddPoint(CG1_2DVector(55.0, 50.0));
+	MyPolygon.AddPoint(CG1_2DVector(100.0, 15.0));
+	MyPolygon.AddPoint(CG1_2DVector(25.0, -5.0));
+	MyPolygon.AddPoint(CG1_2DVector(20.0, 5.0));
+	MyPolygon.AddPoint(CG1_2DVector(-10.0, -5.0));
+	SutherlandHodgemanPolygonClip(&MyPolygon);
+	DrawPolygon(&MyPolygon, RGB_Color(1.0, 0.0, 0.0));
 }
 
 //--------------------------------------------------------------------
@@ -206,8 +207,27 @@ void CG1_DrawTool::FillPolygon(CG1_2DPolygon  *Polygon, RGB_Color color)
 		int MaximumY = Polygon->GetHighestY();
 		CG1_EdgeTable ET;
 		CG1_ActiveEdgeTable AET;
-
 		// ZELF VERDER IMPLEMENTEREN
+        ET.Initialize(Polygon);
+        int y = MinimumY;
+        while ((ET.EdgeTableRows.size() > 0 || AET.ActiveEdges.size() > 0) && y <= MaximumY)
+        {
+            CG1_EdgeTableRow* etr = ET.GetEdgeTableRow(y);
+            AET.Add(etr);
+            // Draw
+            for(AET.ActiveEdgeIterator = AET.ActiveEdges.begin(); AET.ActiveEdgeIterator != AET.ActiveEdges.end(); )
+            {
+                CG1_Edge* first = *AET.ActiveEdgeIterator;
+                AET.ActiveEdgeIterator++;
+                CG1_Edge* second = *AET.ActiveEdgeIterator;
+                AET.ActiveEdgeIterator++;
+                DrawDDALine(CG1_Line((int)first->Current_X, y, (int)second->Current_X, y), color);
+            }
+            // Update
+            y++;
+            AET.RemoveObsoleteEdges(y);
+            AET.Update_CurrentX_Values();
+        }
 	}
 }
 
@@ -258,8 +278,75 @@ CG1_OutCode CG1_DrawTool::CompOutCode(float x, float y)
 
 bool CG1_DrawTool::CohenSutherLandClip(CG1_Line* Line)
 {
-	
-	return 0;
+	float x0 = (float)Line->X0();
+	float y0 = (float)Line->Y0();
+	float x1 = (float)Line->X1();
+	float y1 = (float)Line->Y1();
+
+	CG1_OutCode c1 = CompOutCode(x0, y0);
+	CG1_OutCode c2 = CompOutCode(x1, y1);
+
+	bool done = false;
+	bool accept = false;
+
+	do
+	{
+		if ((c1.all | c2.all) == 0)
+		{
+			accept = true;
+			done = true;
+		}
+		else if ((c1.all & c2.all) != 0)
+		{
+			accept = false;
+			done = true;
+		}
+		else
+		{
+			CG1_OutCode out = (c1.all != 0) ? c1 : c2;
+			float x, y;
+			// Find intersection point; 
+            // using formulas y = y1 + slope * (x - x1), 
+            // x = x1 + (1 / slope) * (y - y1) 
+			if (out.all & 8)
+			{
+				x = x0 + (x1 - x0) * (ClipTop - y0) / (y1 - y0);
+				y = ClipTop;
+			}
+			else if (out.all & 4)
+			{
+				x = x0 + (x1 - x0) * (ClipBottom - y0) / (y1 - y0); 
+                y = ClipBottom;
+			}
+			else if (out.all & 2)
+			{
+				y = y0 + (y1 - y0) * (ClipRight - x0) / (x1 - x0); 
+                x = ClipRight;
+			}
+			else if (out.all & 1)
+			{
+				y = y0 + (y1 - y0) * (ClipLeft - x0) / (x1 - x0); 
+                x = ClipLeft; 
+			}
+
+			if (out.all == c1.all)
+			{
+				x0 = x;
+				y0 = y;
+				c1 = CompOutCode(x0, y0);
+			}
+			else
+			{
+				x1 = x;
+				y1 = y;
+				c2 = CompOutCode(x1, y1);
+			}
+		}
+	}
+	while (!done);
+	Line->SetData(x0, y0, x1, y1);
+
+	return accept;
 }
 
 //--------------------------------------------------------------------
@@ -388,25 +475,79 @@ void CG1_DrawTool::DrawPolygon(CG1_2DPolygon *Polygon, RGB_Color color)
     CG1_2DVector FirstPoint;
     CG1_2DVector SecondPoint;
     FirstPoint = Polygon->GetPoint(0);
-    for(int i=1; i<NrOfPoints; i++)
+    for (int i = 1; i < NrOfPoints; i++)
     {
-	SecondPoint = Polygon->GetPoint(i);
-	CG1_Line CurrentEdge;
-	CurrentEdge.SetData(FirstPoint.GetX(), FirstPoint.GetY(), SecondPoint.GetX(), SecondPoint.GetY());
-	DrawMidPointLine(CurrentEdge, color);
-	FirstPoint = SecondPoint;
+		SecondPoint = Polygon->GetPoint(i);
+		CG1_Line CurrentEdge;
+		CurrentEdge.SetData(FirstPoint.GetX(), FirstPoint.GetY(), SecondPoint.GetX(), SecondPoint.GetY());
+		DrawDDALine(CurrentEdge, color);
+		FirstPoint = SecondPoint;
     }
     SecondPoint = Polygon->GetPoint(0);
     CG1_Line CurrentEdge;
     CurrentEdge.SetData(FirstPoint.GetX(), FirstPoint.GetY(), SecondPoint.GetX(), SecondPoint.GetY());
-    DrawMidPointLine(CurrentEdge, color);
+    DrawDDALine(CurrentEdge, color);
 }
 
 //--------------------------------------------------------------------
 
 void CG1_DrawTool::SutherlandHodgemanPolygonClip(CG1_2DPolygon *Polygon)
 {
-    
+    CG1_2DPolygon NewPolygon;
+	for (int i = 0; i < 4; i++)		// vier kanten:		0 = onder | 1 = rechts | 2 = boven | 3 = links
+	{
+		int value;
+		switch(i)
+		{
+		case 0:	// onder
+			{
+				value = ClipBottom;
+				break;
+			}
+		case 1:	// rechts
+			{
+				value = ClipRight;
+				break;
+			}
+		case 2:	// boven
+			{
+				value = ClipTop;
+				break;
+			}	
+		case 3:	// links
+			{
+				value = ClipLeft;
+				break;
+			}
+		}
+		CG1_2DVector firstPoint = Polygon->GetPoint(Polygon->GetSize() - 1);
+		for (int j = 0; j < Polygon->GetSize(); ++j)
+		{
+			CG1_2DVector secondPoint = Polygon->GetPoint(j);
+			if (Inside(firstPoint, i, value) && Inside(secondPoint, i, value))
+			{
+				NewPolygon.AddPoint(secondPoint);
+			}
+			else if (!Inside(firstPoint, i, value) && Inside(secondPoint, i, value))
+			{
+				CG1_2DVector punt = GetIntersection(firstPoint, secondPoint, i, value);
+				NewPolygon.AddPoint(punt);
+				NewPolygon.AddPoint(secondPoint);
+			}
+			else if (!Inside(secondPoint, i, value) && Inside(firstPoint, i, value))
+			{
+				CG1_2DVector punt = GetIntersection(firstPoint, secondPoint, i, value);
+				NewPolygon.AddPoint(punt);
+			}
+			else
+			{
+				// Nothing
+			}
+			firstPoint = secondPoint;
+		}
+		*Polygon = NewPolygon;
+		NewPolygon.Clear();
+	}
 }
 
 //--------------------------------------------------------------------
