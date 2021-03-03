@@ -211,6 +211,11 @@
 			"EWIEGA46WW/moc_CG1_2DVector.cpp"
 		],
 		[
+			"/Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_3/les3/CG1_4DMatrix.h",
+			"MU",
+			"EWIEGA46WW/moc_CG1_4DMatrix.cpp"
+		],
+		[
 			"/Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_3/les3/CG1_4DVector.h",
 			"MU",
 			"EWIEGA46WW/moc_CG1_4DVector.cpp"
@@ -324,6 +329,10 @@
 		],
 		[
 			"/Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_3/les3/CG1_2DVector.cpp",
+			"MU"
+		],
+		[
+			"/Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_3/les3/CG1_4DMatrix.cpp",
 			"MU"
 		],
 		[

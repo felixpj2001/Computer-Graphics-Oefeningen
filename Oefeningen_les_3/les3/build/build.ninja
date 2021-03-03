@@ -187,6 +187,14 @@ build CMakeFiles/les3.dir/CG1_2DPolygon.cpp.o: CXX_COMPILER__les3_Debug ../CG1_2
   OBJECT_DIR = CMakeFiles/les3.dir
   OBJECT_FILE_DIR = CMakeFiles/les3.dir
 
+build CMakeFiles/les3.dir/CG1_4DMatrix.cpp.o: CXX_COMPILER__les3_Debug ../CG1_4DMatrix.cpp || cmake_object_order_depends_target_les3
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles/les3.dir/CG1_4DMatrix.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -fPIC -std=gnu++17
+  INCLUDES = -I. -I../ -Iles3_autogen/include -iframework /usr/local/opt/qt/lib -isystem /usr/local/opt/qt/lib/QtWidgets.framework/Headers -isystem /usr/local/opt/qt/lib/QtCore.framework/Headers -isystem /usr/local/opt/qt/share/qt/mkspecs/macx-clang -isystem /usr/local/opt/qt/include -isystem /usr/local/opt/qt/lib/QtGui.framework/Headers
+  OBJECT_DIR = CMakeFiles/les3.dir
+  OBJECT_FILE_DIR = CMakeFiles/les3.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target les3
@@ -195,7 +203,7 @@ build CMakeFiles/les3.dir/CG1_2DPolygon.cpp.o: CXX_COMPILER__les3_Debug ../CG1_2
 #############################################
 # Link the executable les3
 
-build les3: CXX_EXECUTABLE_LINKER__les3_Debug CMakeFiles/les3.dir/les3_autogen/mocs_compilation.cpp.o CMakeFiles/les3.dir/main.cpp.o CMakeFiles/les3.dir/RGB_Color.cpp.o CMakeFiles/les3.dir/cg_MainWindow.cpp.o CMakeFiles/les3.dir/CG1_Polygon.cpp.o CMakeFiles/les3.dir/CG1_Line.cpp.o CMakeFiles/les3.dir/CG1_EdgeTableRow.cpp.o CMakeFiles/les3.dir/CG1_EdgeTable.cpp.o CMakeFiles/les3.dir/CG1_Edge.cpp.o CMakeFiles/les3.dir/CG1_Drawtool.cpp.o CMakeFiles/les3.dir/cg_Canvas.cpp.o CMakeFiles/les3.dir/CG1_ActiveEdgeTable.cpp.o CMakeFiles/les3.dir/CG1_2DVector.cpp.o CMakeFiles/les3.dir/CG1_4DVector.cpp.o CMakeFiles/les3.dir/CG1_2DPolygon.cpp.o | /usr/local/opt/qt/lib/QtWidgets.framework/Versions/A/QtWidgets /usr/local/opt/qt/lib/QtGui.framework/Versions/A/QtGui /usr/local/opt/qt/lib/QtCore.framework/Versions/A/QtCore || les3_autogen les3_autogen_timestamp_deps
+build les3: CXX_EXECUTABLE_LINKER__les3_Debug CMakeFiles/les3.dir/les3_autogen/mocs_compilation.cpp.o CMakeFiles/les3.dir/main.cpp.o CMakeFiles/les3.dir/RGB_Color.cpp.o CMakeFiles/les3.dir/cg_MainWindow.cpp.o CMakeFiles/les3.dir/CG1_Polygon.cpp.o CMakeFiles/les3.dir/CG1_Line.cpp.o CMakeFiles/les3.dir/CG1_EdgeTableRow.cpp.o CMakeFiles/les3.dir/CG1_EdgeTable.cpp.o CMakeFiles/les3.dir/CG1_Edge.cpp.o CMakeFiles/les3.dir/CG1_Drawtool.cpp.o CMakeFiles/les3.dir/cg_Canvas.cpp.o CMakeFiles/les3.dir/CG1_ActiveEdgeTable.cpp.o CMakeFiles/les3.dir/CG1_2DVector.cpp.o CMakeFiles/les3.dir/CG1_4DVector.cpp.o CMakeFiles/les3.dir/CG1_2DPolygon.cpp.o CMakeFiles/les3.dir/CG1_4DMatrix.cpp.o | /usr/local/opt/qt/lib/QtWidgets.framework/Versions/A/QtWidgets /usr/local/opt/qt/lib/QtGui.framework/Versions/A/QtGui /usr/local/opt/qt/lib/QtCore.framework/Versions/A/QtCore || les3_autogen les3_autogen_timestamp_deps
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk
   LINK_LIBRARIES = -Wl,-rpath,/usr/local/opt/qt/lib  /usr/local/opt/qt/lib/QtWidgets.framework/Versions/A/QtWidgets  /usr/local/opt/qt/lib/QtGui.framework/Versions/A/QtGui  -framework  OpenGL  -framework  AGL  -framework AppKit  -framework ImageIO  -framework Metal  /usr/local/opt/qt/lib/QtCore.framework/Versions/A/QtCore  -framework DiskArbitration  -framework IOKit
   OBJECT_DIR = CMakeFiles/les3.dir
@@ -230,7 +238,7 @@ build les3_autogen/timestamp: CUSTOM_COMMAND /usr/local/opt/qt/bin/moc /usr/loca
 #############################################
 # Phony custom command for CMakeFiles/les3_autogen_timestamp_deps
 
-build CMakeFiles/les3_autogen_timestamp_deps: phony /usr/local/opt/qt/lib/QtWidgets.framework/Versions/A/QtWidgets /usr/local/opt/qt/bin/uic /usr/local/opt/qt/bin/moc /usr/local/opt/qt/lib/QtGui.framework/Versions/A/QtGui
+build CMakeFiles/les3_autogen_timestamp_deps: phony /usr/local/opt/qt/lib/QtGui.framework/Versions/A/QtGui /usr/local/opt/qt/lib/QtWidgets.framework/Versions/A/QtWidgets /usr/local/opt/qt/bin/moc /usr/local/opt/qt/bin/uic
 
 
 #############################################

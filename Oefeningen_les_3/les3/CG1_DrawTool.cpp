@@ -4,6 +4,8 @@
 #include "CG1_ActiveEdgeTable.h"
 #include <stdio.h>
 
+#define PI 3.1415
+
 //--------------------------------------------------------------------
 
 CG1_DrawTool::CG1_DrawTool()
@@ -14,10 +16,10 @@ CG1_DrawTool::CG1_DrawTool()
     ClipTop    = Increment;
     ClipBottom = -Increment;
 
-	//Camera_X = 0.0;
-    //Camera_Y = 0.0;
-    //Camera_Z = 150.0;
-    //Scene_RotationY = 0.0;
+	Camera_X = 0.0;
+    Camera_Y = 0.0;
+    Camera_Z = -150.0;
+    Scene_RotationY = 0.0;
 }
 
 //--------------------------------------------------------------------
@@ -34,8 +36,10 @@ void CG1_DrawTool::DrawData()
 	canvas->clear();
 
 	//INITIALISEER DE MODELVIEWMATRIX
+	ModelViewMatrix.LoadIdentity();
+	ModelViewMatrix.Translate(-Camera_X, -Camera_Y, -Camera_Z);
 	//INITIALISEER DE PROJECTIEMATRIX
-
+	ProjectionMatrix.SetPerspectiveProjection(120);
 
 	//ASSENSTELSEL TEKENEN
     CG1_4DVector start, end;
@@ -47,7 +51,23 @@ void CG1_DrawTool::DrawData()
     Draw3DLine(start, end, RGB_Color(0.0f, 1.0f, 0.0f));
     start.SetXYZW(0, 0, 100, 1);
     end.SetXYZW(0, 0, -100, 1);
-    Draw3DLine(start, end, RGB_Color(0.0f, 0.0f, 1.0f));  
+    Draw3DLine(start, end, RGB_Color(0.0f, 0.0f, 1.0f));
+
+	// ModelViewMatrix.LoadIdentity();
+	// ModelViewMatrix.Translate(50, 0, 0);
+	// DrawUnitCube(RGB_Color(0.0f, 0.0f, 1.0f));
+	// PushMatrix();
+	// ModelViewMatrix.Translate(0, 50, 0);
+	// DrawUnitCube(RGB_Color(0.0f, 1.0f, 0.0f));
+	// PopMatrix();
+	// ModelViewMatrix.Translate(50, 0, 0);
+	// DrawUnitCube(RGB_Color(0.0f, 1.0f, 0.0f));
+
+	// ModelViewMatrix.LoadIdentity();
+	ModelViewMatrix.RotateY(PI / 3);
+	ModelViewMatrix.Translate(50, 50, 0);
+	ModelViewMatrix.Scale(10, 10, 0);
+	DrawUnitCube(RGB_Color(1.0f, 0.0f, 0.0f));
 }
 
 //--------------------------------------------------------------------
@@ -541,7 +561,7 @@ void CG1_DrawTool::DrawUnitCube(RGB_Color color)
 
 void CG1_DrawTool::Draw3DLine(CG1_4DVector start, CG1_4DVector end, RGB_Color color)
 {
-	/*start = ModelViewMatrix * start;
+	start = ModelViewMatrix * start;
 	end = ModelViewMatrix * end;
 
 	start = ProjectionMatrix * start;
@@ -554,32 +574,32 @@ void CG1_DrawTool::Draw3DLine(CG1_4DVector start, CG1_4DVector end, RGB_Color co
 
 	if(CyrusBeckClip(&The_Line))
 		DrawDDALine(The_Line, color);
-	*/
+	
 }
 
 //--------------------------------------------------------------------
 
 void CG1_DrawTool::PushMatrix()
 {
-	//MatrixStack.push(ModelViewMatrix);
+	MatrixStack.push(ModelViewMatrix);
 }
 
 //--------------------------------------------------------------------
 
 void CG1_DrawTool::PopMatrix()
 {
-	/*if(MatrixStack.size() > 0)
+	if(MatrixStack.size() > 0)
 	{
 		ModelViewMatrix = MatrixStack.top();
 		MatrixStack.pop();
-	}*/
+	}
 }
 
 //--------------------------------------------------------------------
 
 void CG1_DrawTool::ModifyView(char axe, int amount)
 {
-	/*switch(axe)
+	switch(axe)
 		{
 		case 'x':	
 			Camera_X += amount;
@@ -593,5 +613,5 @@ void CG1_DrawTool::ModifyView(char axe, int amount)
 		case 'r':	
 			Scene_RotationY += amount;
 			break;
-	}*/
+	}
 }

@@ -40,6 +40,8 @@ add_executable(les3
 	CG1_4DVector.cpp
 	CG1_2DPolygon.h
 	CG1_2DPolygon.cpp
+	CG1_4DMatrix.h
+	CG1_4DMatrix.cpp
 )
 
 set(CMAKE_DEFAULT_STARTUP_PROJECT les3)

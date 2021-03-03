@@ -2,6 +2,7 @@
 //
 //////////////////////////////////////////////////////////////////////
 
+#include "CG1_4DMatrix.h"
 #if !defined(AFX_G1_DRAWTOOL_H__EAC1E35F_BAF4_4ECF_957A_D5DEF2B21C31__INCLUDED_)
 #define AFX_G1_DRAWTOOL_H__EAC1E35F_BAF4_4ECF_957A_D5DEF2B21C31__INCLUDED_
 
@@ -70,12 +71,15 @@ private:
     int ClipBottom;
     int Increment;
 
-	//double Camera_X;
-    //double Camera_Y;
-    //double Camera_Z;
-    //double Scene_RotationY;
+	double Camera_X;
+    double Camera_Y;
+    double Camera_Z;
+    double Scene_RotationY;
 
-    //std::stack<CG1_4DMatrix> MatrixStack;
+    std::stack<CG1_4DMatrix> MatrixStack;
+
+	CG1_4DMatrix ModelViewMatrix;
+	CG1_4DMatrix ProjectionMatrix;
 
 };
 
