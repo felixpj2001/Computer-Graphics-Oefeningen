@@ -50,6 +50,12 @@ add_executable(les4
 	CG1_4DMatrix.cpp
 	CG1_Bezier.h
 	CG1_Bezier.cpp
+	Object_Vertex.h
+	Object_Polygon.h
+	Object_Object.h
+	List_Vertices.h
+	List_Polygons.h
+	List_Objects.h
 )
 
 set(CMAKE_DEFAULT_STARTUP_PROJECT les4)

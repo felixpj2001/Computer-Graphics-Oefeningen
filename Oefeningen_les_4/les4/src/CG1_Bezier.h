@@ -28,6 +28,7 @@ public:
 private:
 	bool createGeoMatrix();
 	
+	
 private:
 	enum Iteration_Method m_IterationMethod;	// Iteration method (default: brute force)
 };

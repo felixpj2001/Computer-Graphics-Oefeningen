@@ -20,7 +20,7 @@ List_Beziers::~List_Beziers()
 
 Object_Bezier* List_Beziers::GetBezier(int index)
 {
-    return m_Beziers[index];
+    return &m_Beziers[index];
 }
 
 //--------------------------------------------------------------------
@@ -32,7 +32,7 @@ int List_Beziers::GetSize()
 
 //--------------------------------------------------------------------
 
-void List_Beziers::AddBezier(Object_Bezier *bezier)
+void List_Beziers::AddBezier(Object_Bezier bezier)
 { 
     m_Beziers.push_back(bezier); 
 }

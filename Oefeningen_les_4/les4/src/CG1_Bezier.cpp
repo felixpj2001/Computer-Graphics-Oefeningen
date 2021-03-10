@@ -87,7 +87,12 @@ void CG1_Bezier::setIterationMethod(enum Iteration_Method m)
 
 void CG1_Bezier::BruteForce ( int nrofsteps )
 {
-    //todo
+    for (int i = 0; i < nrofsteps; i++)
+    {
+        CG1_4DVector p;
+        evaluate((double)i / nrofsteps, p);
+        m_PointVector.push_back(p);
+    }
 }
 
 //--------------------------------------------------------------------
@@ -95,6 +100,7 @@ void CG1_Bezier::BruteForce ( int nrofsteps )
 void CG1_Bezier::Casteljau  ( int nrofsteps )
 {
     //todo	
+
 }
 
 //--------------------------------------------------------------------
@@ -102,6 +108,7 @@ void CG1_Bezier::Casteljau  ( int nrofsteps )
 void CG1_Bezier::ForwardDiff( int nrofsteps )
 {
     //todo
+
 }
 
 //--------------------------------------------------------------------

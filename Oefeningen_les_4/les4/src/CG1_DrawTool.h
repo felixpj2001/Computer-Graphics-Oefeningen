@@ -19,6 +19,11 @@
 #include "CG1_4DMatrix.h"
 #include <stack>
 
+#include "List_Vertices.h"
+#include "List_Polygons.h"
+#include "List_Objects.h"
+#include "List_Beziers.h"
+
 struct CG1_OutCode
 {
 	int all;
@@ -83,6 +88,12 @@ private:
 	CG1_4DMatrix ModelViewMatrix;
     CG1_4DMatrix ProjectionMatrix;
     std::stack<CG1_4DMatrix> MatrixStack;
+
+	List_Vertices lVertices;
+	List_Polygons lPolygons;
+	List_Objects lObjects;
+
+	List_Beziers lBeziers;
 
 };
 
