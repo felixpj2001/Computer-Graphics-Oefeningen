@@ -18,7 +18,7 @@ CG1_DrawTool::CG1_DrawTool()
 
 	Camera_X = 0.0;
     Camera_Y = 0.0;
-    Camera_Z = -150.0;
+    Camera_Z = 150.0;
     Scene_RotationY = 0.0;
 }
 
@@ -37,9 +37,9 @@ void CG1_DrawTool::DrawData()
 
 	//INITIALISEER DE MODELVIEWMATRIX
 	ModelViewMatrix.LoadIdentity();
-	ModelViewMatrix.Translate(-Camera_X, -Camera_Y, -Camera_Z);
+	ModelViewMatrix.Translate(Camera_X, Camera_Y, Camera_Z);
 	//INITIALISEER DE PROJECTIEMATRIX
-	ProjectionMatrix.SetPerspectiveProjection(120);
+	ProjectionMatrix.SetPerspectiveProjection(1200);
 
 	//ASSENSTELSEL TEKENEN
     CG1_4DVector start, end;
@@ -53,21 +53,21 @@ void CG1_DrawTool::DrawData()
     end.SetXYZW(0, 0, -100, 1);
     Draw3DLine(start, end, RGB_Color(0.0f, 0.0f, 1.0f));
 
-	// ModelViewMatrix.LoadIdentity();
-	// ModelViewMatrix.Translate(50, 0, 0);
-	// DrawUnitCube(RGB_Color(0.0f, 0.0f, 1.0f));
-	// PushMatrix();
-	// ModelViewMatrix.Translate(0, 50, 0);
-	// DrawUnitCube(RGB_Color(0.0f, 1.0f, 0.0f));
-	// PopMatrix();
-	// ModelViewMatrix.Translate(50, 0, 0);
-	// DrawUnitCube(RGB_Color(0.0f, 1.0f, 0.0f));
+	//ModelViewMatrix.LoadIdentity();
+	ModelViewMatrix.Translate(50, 0, 0);
+	DrawUnitCube(RGB_Color(0.0f, 0.0f, 1.0f));
+	PushMatrix();
+	ModelViewMatrix.Translate(0, 50, 0);
+	DrawUnitCube(RGB_Color(0.0f, 1.0f, 0.0f));
+	PopMatrix();
+	ModelViewMatrix.Translate(50, 0, 0);
+	DrawUnitCube(RGB_Color(0.0f, 1.0f, 0.0f));
 
-	// ModelViewMatrix.LoadIdentity();
-	ModelViewMatrix.RotateY(PI / 3);
-	ModelViewMatrix.Translate(50, 50, 0);
-	ModelViewMatrix.Scale(10, 10, 0);
-	DrawUnitCube(RGB_Color(1.0f, 0.0f, 0.0f));
+	// // ModelViewMatrix.LoadIdentity();
+	// ModelViewMatrix.RotateY(PI / 3);
+	// ModelViewMatrix.Translate(50, 50, 0);
+	// ModelViewMatrix.Scale(10, 10, 0);
+	// DrawUnitCube(RGB_Color(1.0f, 0.0f, 0.0f));
 }
 
 //--------------------------------------------------------------------
