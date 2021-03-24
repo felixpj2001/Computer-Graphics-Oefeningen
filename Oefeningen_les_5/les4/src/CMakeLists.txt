@@ -28,8 +28,8 @@ add_executable(les4
 	CG1_EdgeTable.cpp
 	CG1_Edge.h
 	CG1_Edge.cpp
-	CG1_Drawtool.h
-	CG1_Drawtool.cpp
+	CG1_DrawTool.h
+	CG1_DrawTool.cpp
 	cg_Canvas.h
 	cg_Canvas.cpp
 	CG1_ActiveEdgeTable.h
@@ -56,6 +56,7 @@ add_executable(les4
 	List_Vertices.h
 	List_Polygons.h
 	List_Objects.h
+	ZBuffer.h
 )
 
 set(CMAKE_DEFAULT_STARTUP_PROJECT les4)

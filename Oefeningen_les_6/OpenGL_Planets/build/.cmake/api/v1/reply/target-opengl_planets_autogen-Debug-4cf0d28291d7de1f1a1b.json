@@ -17,12 +17,12 @@
 	"dependencies" : 
 	[
 		{
-			"id" : "les4_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
+			"id" : "opengl_planets_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		}
 	],
-	"id" : "les4_autogen::@6890427a1f51a3e7e1df",
+	"id" : "opengl_planets_autogen::@6890427a1f51a3e7e1df",
 	"isGeneratorProvided" : true,
-	"name" : "les4_autogen",
+	"name" : "opengl_planets_autogen",
 	"paths" : 
 	{
 		"build" : ".",
@@ -51,19 +51,19 @@
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "/Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_4/les4/build/CMakeFiles/les4_autogen",
+			"path" : "/Users/pieter-janvanoppen/Downloads/OpenGL_Planets/build/CMakeFiles/opengl_planets_autogen",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "/Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_4/les4/build/CMakeFiles/les4_autogen.rule",
+			"path" : "/Users/pieter-janvanoppen/Downloads/OpenGL_Planets/build/CMakeFiles/opengl_planets_autogen.rule",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "/Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_4/les4/build/les4_autogen/timestamp.rule",
+			"path" : "/Users/pieter-janvanoppen/Downloads/OpenGL_Planets/build/opengl_planets_autogen/timestamp.rule",
 			"sourceGroupIndex" : 1
 		}
 	],

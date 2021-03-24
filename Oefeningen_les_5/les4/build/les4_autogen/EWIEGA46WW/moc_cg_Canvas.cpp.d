@@ -1,5 +1,5 @@
-/Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_4/les4/build/les4_autogen/EWIEGA46WW/moc_cg_Canvas.cpp: /Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_4/les4/src/cg_Canvas.h \
-  /Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_4/les4/build/les4_autogen/moc_predefs.h \
+/Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_5/les4/build/les4_autogen/EWIEGA46WW/moc_cg_Canvas.cpp: /Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_5/les4/src/cg_Canvas.h \
+  /Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_5/les4/build/les4_autogen/moc_predefs.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/Availability.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/AvailabilityInternal.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/AvailabilityMacros.h \
@@ -119,7 +119,7 @@
   /Library/Developer/CommandLineTools/usr/include/c++/v1/wchar.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/wctype.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include/stdarg.h \
-  /Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_4/les4/src/RGB_Color.h \
+  /Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_5/les4/src/RGB_Color.h \
   /usr/local/Cellar/qt/6.0.2/lib/QtCore.framework/Versions/A/Headers/qalgorithms.h \
   /usr/local/Cellar/qt/6.0.2/lib/QtCore.framework/Versions/A/Headers/qanystringview.h \
   /usr/local/Cellar/qt/6.0.2/lib/QtCore.framework/Versions/A/Headers/qarraydata.h \

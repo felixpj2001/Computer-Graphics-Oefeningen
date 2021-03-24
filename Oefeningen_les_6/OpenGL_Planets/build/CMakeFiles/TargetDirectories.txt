@@ -1,0 +1,5 @@
+/Users/pieter-janvanoppen/Downloads/OpenGL_Planets/build/CMakeFiles/rebuild_cache.dir
+/Users/pieter-janvanoppen/Downloads/OpenGL_Planets/build/CMakeFiles/edit_cache.dir
+/Users/pieter-janvanoppen/Downloads/OpenGL_Planets/build/CMakeFiles/opengl_planets.dir
+/Users/pieter-janvanoppen/Downloads/OpenGL_Planets/build/CMakeFiles/opengl_planets_autogen_timestamp_deps.dir
+/Users/pieter-janvanoppen/Downloads/OpenGL_Planets/build/CMakeFiles/opengl_planets_autogen.dir

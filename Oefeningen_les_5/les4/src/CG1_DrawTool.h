@@ -62,6 +62,8 @@ public:
     void DrawPolygonFromList(int index, RGB_Color color);
 	void DrawBezierFromList(int index, RGB_Color color);
 
+	void DrawPolygonsUsingZBuffer();
+
 	void ClipUp();
 	void ClipDown();
 

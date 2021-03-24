@@ -1,5 +1,5 @@
-/Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_4/les4/build/les4_autogen/EWIEGA46WW/moc_cg_MainWindow.cpp: /Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_4/les4/src/cg_MainWindow.h \
-  /Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_4/les4/build/les4_autogen/moc_predefs.h \
+/Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_5/les4/build/les4_autogen/EWIEGA46WW/moc_cg_MainWindow.cpp: /Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_5/les4/src/cg_MainWindow.h \
+  /Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_5/les4/build/les4_autogen/moc_predefs.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/Availability.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/AvailabilityInternal.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/AvailabilityMacros.h \
@@ -121,24 +121,24 @@
   /Library/Developer/CommandLineTools/usr/include/c++/v1/wchar.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/wctype.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include/stdarg.h \
-  /Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_4/les4/src/CG1_2DPolygon.h \
-  /Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_4/les4/src/CG1_2DVector.h \
-  /Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_4/les4/src/CG1_4DMatrix.h \
-  /Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_4/les4/src/CG1_4DVector.h \
-  /Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_4/les4/src/CG1_Bezier.h \
-  /Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_4/les4/src/CG1_DrawTool.h \
-  /Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_4/les4/src/CG1_Line.h \
-  /Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_4/les4/src/CG1_ParamCubCurve.h \
-  /Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_4/les4/src/List_Beziers.h \
-  /Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_4/les4/src/List_Objects.h \
-  /Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_4/les4/src/List_Polygons.h \
-  /Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_4/les4/src/List_Vertices.h \
-  /Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_4/les4/src/Object_Bezier.h \
-  /Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_4/les4/src/Object_Object.h \
-  /Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_4/les4/src/Object_Polygon.h \
-  /Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_4/les4/src/Object_Vertex.h \
-  /Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_4/les4/src/RGB_Color.h \
-  /Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_4/les4/src/cg_Canvas.h \
+  /Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_5/les4/src/CG1_2DPolygon.h \
+  /Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_5/les4/src/CG1_2DVector.h \
+  /Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_5/les4/src/CG1_4DMatrix.h \
+  /Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_5/les4/src/CG1_4DVector.h \
+  /Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_5/les4/src/CG1_Bezier.h \
+  /Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_5/les4/src/CG1_DrawTool.h \
+  /Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_5/les4/src/CG1_Line.h \
+  /Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_5/les4/src/CG1_ParamCubCurve.h \
+  /Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_5/les4/src/List_Beziers.h \
+  /Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_5/les4/src/List_Objects.h \
+  /Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_5/les4/src/List_Polygons.h \
+  /Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_5/les4/src/List_Vertices.h \
+  /Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_5/les4/src/Object_Bezier.h \
+  /Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_5/les4/src/Object_Object.h \
+  /Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_5/les4/src/Object_Polygon.h \
+  /Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_5/les4/src/Object_Vertex.h \
+  /Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_5/les4/src/RGB_Color.h \
+  /Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_5/les4/src/cg_Canvas.h \
   /usr/local/Cellar/qt/6.0.2/lib/QtCore.framework/Versions/A/Headers/QList \
   /usr/local/Cellar/qt/6.0.2/lib/QtCore.framework/Versions/A/Headers/QObject \
   /usr/local/Cellar/qt/6.0.2/lib/QtCore.framework/Versions/A/Headers/QRect \

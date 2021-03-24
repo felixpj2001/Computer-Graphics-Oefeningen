@@ -42,7 +42,7 @@ rule CXX_EXECUTABLE_LINKER__les4_Debug
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /usr/local/Cellar/cmake/3.19.6/bin/cmake --regenerate-during-build -S/Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_4/les4/src -B/Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_4/les4/build
+  command = /usr/local/Cellar/cmake/3.19.7/bin/cmake --regenerate-during-build -S/Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_5/les4/src -B/Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_5/les4/build
   description = Re-running CMake...
   generator = 1
 
@@ -51,7 +51,7 @@ rule RERUN_CMAKE
 # Rule for cleaning additional files.
 
 rule CLEAN_ADDITIONAL
-  command = /usr/local/Cellar/cmake/3.19.6/bin/cmake -DCONFIG=$CONFIG -P CMakeFiles/clean_additional.cmake
+  command = /usr/local/Cellar/cmake/3.19.7/bin/cmake -DCONFIG=$CONFIG -P CMakeFiles/clean_additional.cmake
   description = Cleaning additional files...
 
 
