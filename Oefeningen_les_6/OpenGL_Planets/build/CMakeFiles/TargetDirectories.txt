@@ -1,5 +1,5 @@
-/Users/pieter-janvanoppen/Downloads/OpenGL_Planets/build/CMakeFiles/rebuild_cache.dir
-/Users/pieter-janvanoppen/Downloads/OpenGL_Planets/build/CMakeFiles/edit_cache.dir
-/Users/pieter-janvanoppen/Downloads/OpenGL_Planets/build/CMakeFiles/opengl_planets.dir
-/Users/pieter-janvanoppen/Downloads/OpenGL_Planets/build/CMakeFiles/opengl_planets_autogen_timestamp_deps.dir
-/Users/pieter-janvanoppen/Downloads/OpenGL_Planets/build/CMakeFiles/opengl_planets_autogen.dir
+/Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_6/OpenGL_Planets/build/CMakeFiles/rebuild_cache.dir
+/Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_6/OpenGL_Planets/build/CMakeFiles/edit_cache.dir
+/Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_6/OpenGL_Planets/build/CMakeFiles/opengl_planets.dir
+/Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_6/OpenGL_Planets/build/CMakeFiles/opengl_planets_autogen_timestamp_deps.dir
+/Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_6/OpenGL_Planets/build/CMakeFiles/opengl_planets_autogen.dir

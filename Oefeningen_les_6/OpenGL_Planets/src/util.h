@@ -1,7 +1,7 @@
 #ifndef UTIL_H
 #define UTIL_H
 
-// #include <gl\glu.h>
+// #include <gl/glu.h>
 #include <GLUT/glut.h>
 
 class Util

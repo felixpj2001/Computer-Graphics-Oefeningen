@@ -1,4 +1,4 @@
-# Install script for directory: /Users/pieter-janvanoppen/Downloads/OpenGL_Planets/src
+# Install script for directory: /Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_6/OpenGL_Planets/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/pieter-janvanoppen/Downloads/OpenGL_Planets/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_6/OpenGL_Planets/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

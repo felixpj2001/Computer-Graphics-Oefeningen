@@ -1,5 +1,5 @@
-/Users/pieter-janvanoppen/Downloads/OpenGL_Planets/build/opengl_planets_autogen/EWIEGA46WW/moc_planets.cpp: /Users/pieter-janvanoppen/Downloads/OpenGL_Planets/src/planets.h \
-  /Users/pieter-janvanoppen/Downloads/OpenGL_Planets/build/opengl_planets_autogen/moc_predefs.h \
+/Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_6/OpenGL_Planets/build/opengl_planets_autogen/EWIEGA46WW/moc_planets.cpp: /Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_6/OpenGL_Planets/src/planets.h \
+  /Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_6/OpenGL_Planets/build/opengl_planets_autogen/moc_predefs.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/Availability.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/AvailabilityInternal.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/AvailabilityMacros.h \
@@ -120,7 +120,7 @@
   /Library/Developer/CommandLineTools/usr/include/c++/v1/wchar.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/wctype.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include/stdarg.h \
-  /Users/pieter-janvanoppen/Downloads/OpenGL_Planets/src/planetsview.h \
+  /Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_6/OpenGL_Planets/src/planetsview.h \
   /usr/local/Cellar/qt/6.0.2/lib/QtCore.framework/Versions/A/Headers/QList \
   /usr/local/Cellar/qt/6.0.2/lib/QtCore.framework/Versions/A/Headers/QObject \
   /usr/local/Cellar/qt/6.0.2/lib/QtCore.framework/Versions/A/Headers/QRect \

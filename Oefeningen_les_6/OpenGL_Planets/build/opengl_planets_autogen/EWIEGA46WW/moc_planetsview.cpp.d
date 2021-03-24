@@ -1,5 +1,5 @@
-/Users/pieter-janvanoppen/Downloads/OpenGL_Planets/build/opengl_planets_autogen/EWIEGA46WW/moc_planetsview.cpp: /Users/pieter-janvanoppen/Downloads/OpenGL_Planets/src/planetsview.h \
-  /Users/pieter-janvanoppen/Downloads/OpenGL_Planets/build/opengl_planets_autogen/moc_predefs.h \
+/Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_6/OpenGL_Planets/build/opengl_planets_autogen/EWIEGA46WW/moc_planetsview.cpp: /Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_6/OpenGL_Planets/src/planetsview.h \
+  /Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_6/OpenGL_Planets/build/opengl_planets_autogen/moc_predefs.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/Availability.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/AvailabilityInternal.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/AvailabilityMacros.h \
