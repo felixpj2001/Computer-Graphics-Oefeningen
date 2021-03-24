@@ -12,10 +12,10 @@ Navigation::Navigation()
 	camUpx = 0.0, camUpy = 1.0, camUpz = 0.0;
 }
 
-void Navigation::processEvent(QKeyEvent* e)
+void Navigation::processKeyEvent(QKeyEvent* e)
 {
     double speed = 0.5;
-    if (e->key() == Qt::Key_Up)
+    if (e->key() == Qt::Key_Z)
     {
         camPosx += sin(angle) * speed;
         camPosz -= cos(angle) * speed;
@@ -24,13 +24,31 @@ void Navigation::processEvent(QKeyEvent* e)
         camViewz -= cos(angle) * speed;
     }
 
-    if (e->key() == Qt::Key_Down)
+    if (e->key() == Qt::Key_S)
     {
         camPosx -= sin(angle) * speed;
         camPosz += cos(angle) * speed;
 
         camViewx -= sin(angle) * speed;
         camViewz += cos(angle) * speed;
+    }
+
+    if (e->key() == Qt::Key_D)
+    {
+        camPosx += sin(angle + M_PI/2) * speed;
+        camPosz -= cos(angle + M_PI/2) * speed;
+
+        camViewx += sin(angle + M_PI/2) * speed;
+        camViewz -= cos(angle + M_PI/2) * speed;
+    }
+
+    if (e->key() == Qt::Key_Q)
+    {
+        camPosx -= sin(angle + M_PI/2) * speed;
+        camPosz += cos(angle + M_PI/2) * speed;
+
+        camViewx -= sin(angle + M_PI/2) * speed;
+        camViewz += cos(angle + M_PI/2) * speed;
     }
 
     if (e->key() == Qt::Key_Left)
@@ -47,17 +65,22 @@ void Navigation::processEvent(QKeyEvent* e)
         camViewz = -cos(angle) + camPosz;
     }
 
-    if (e->key() == Qt::Key_PageUp)
+    if (e->key() == Qt::Key_Up)
     {
         camPosy += speed;
         camViewy += speed;
     }
 
-    if (e->key() == Qt::Key_PageDown)
+    if (e->key() == Qt::Key_Down)
     {
         camPosy -= speed;
         camViewy -= speed;
     }
+}
+
+void Navigation::processMouseEvent(QMouseEvent* e)
+{
+    // Do stuff
 }
 
 void Navigation::lookAt()

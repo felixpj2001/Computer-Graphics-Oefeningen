@@ -3,6 +3,7 @@
 #define GL_SILENCE_DEPRECATION
 #include <QOpenGLWidget>
 #include <QKeyEvent>
+#include <QMouseEvent>
 #include <QTimer>
 
 #include "navigation.h"
@@ -19,8 +20,13 @@ protected:
 	void resizeGL(int width, int height);
 	void paintGL();
     void keyPressEvent(QKeyEvent* e);
-    // void mouseMoveEvent()
+    void mouseMoveEvent(QMouseEvent* e);
+
 private:
     Navigation nav;
     QTimer timer;
+
+    void drawAxis();
+    void addLight();
+    void drawCube();
 };

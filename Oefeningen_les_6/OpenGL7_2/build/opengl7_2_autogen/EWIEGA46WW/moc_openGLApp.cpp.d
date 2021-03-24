@@ -212,6 +212,7 @@
   /usr/local/Cellar/qt/6.0.2/lib/QtCore.framework/Versions/A/Headers/qvarlengtharray.h \
   /usr/local/Cellar/qt/6.0.2/lib/QtCore.framework/Versions/A/Headers/qversiontagging.h \
   /usr/local/Cellar/qt/6.0.2/lib/QtGui.framework/Versions/A/Headers/QKeyEvent \
+  /usr/local/Cellar/qt/6.0.2/lib/QtGui.framework/Versions/A/Headers/QMouseEvent \
   /usr/local/Cellar/qt/6.0.2/lib/QtGui.framework/Versions/A/Headers/QSurfaceFormat \
   /usr/local/Cellar/qt/6.0.2/lib/QtGui.framework/Versions/A/Headers/QTransform \
   /usr/local/Cellar/qt/6.0.2/lib/QtGui.framework/Versions/A/Headers/qbitmap.h \

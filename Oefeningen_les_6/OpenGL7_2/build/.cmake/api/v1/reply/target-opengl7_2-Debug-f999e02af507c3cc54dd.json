@@ -170,11 +170,11 @@
 	"dependencies" : 
 	[
 		{
-			"id" : "opengl7_2_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
-		},
-		{
 			"backtrace" : 0,
 			"id" : "opengl7_2_autogen::@6890427a1f51a3e7e1df"
+		},
+		{
+			"id" : "opengl7_2_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "opengl7_2::@6890427a1f51a3e7e1df",
