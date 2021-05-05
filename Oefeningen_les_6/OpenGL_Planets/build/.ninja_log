@@ -1,7 +1,0 @@
-# ninja log v5
-554	2942	1616581163543246440	CMakeFiles/opengl_planets.dir/planets.cpp.o	5602d63e37f1aa15
-553	2945	1616581163547063664	CMakeFiles/opengl_planets.dir/main.cpp.o	c7d5f7d5792fe97f
-553	2947	1616581163551453222	CMakeFiles/opengl_planets.dir/opengl_planets_autogen/mocs_compilation.cpp.o	b6fea5b624f8c85e
-3	553	1616581161162224000	opengl_planets_autogen/timestamp	30ba6211ac5a912b
-2947	3146	1616581163762240078	opengl_planets	d10a6c0c6c43d725
-554	2920	1616581163525686902	CMakeFiles/opengl_planets.dir/planetsview.cpp.o	f00bef6f79d5f5d
