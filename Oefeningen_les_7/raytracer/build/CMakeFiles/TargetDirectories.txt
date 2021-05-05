@@ -1,0 +1,4 @@
+/Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_7/raytracer/build/CMakeFiles/rebuild_cache.dir
+/Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_7/raytracer/build/CMakeFiles/edit_cache.dir
+/Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_7/raytracer/build/CMakeFiles/raytracer.dir
+/Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_7/raytracer/build/CMakeFiles/raytracer_autogen.dir
