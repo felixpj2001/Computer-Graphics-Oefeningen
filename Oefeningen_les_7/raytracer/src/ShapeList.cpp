@@ -51,16 +51,18 @@ int ShapeList::GetNrOfShapes()
 Shape *ShapeList::GetNearestIntersection(Ray *ray, ReturnObject *returnedObject)
 {
 	Shape *closest = nullptr;
-	returnedObject = nullptr;
 	for (Shape *shape : Shapes)
 	{
 		ReturnObject *r = new ReturnObject();
 		shape->GetIntersection(ray, r);
 		if (r->mIntersectionFound == true)
 		{
-			if (!returnedObject || r->mDistance < returnedObject->mDistance)
+			if (returnedObject->mIntersectionFound == false || r->mDistance < returnedObject->mDistance)
 			{
-				returnedObject = r;
+				returnedObject->mDistance = r->mDistance;
+				returnedObject->mIntersectionFound = r->mIntersectionFound;
+				returnedObject->mIntersectionPoint = r->mIntersectionPoint;
+				returnedObject->mNormal = r->mNormal;
 				closest = shape;
 			}
 			else

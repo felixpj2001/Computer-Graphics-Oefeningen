@@ -3,6 +3,11 @@
 
 PlanetsView::PlanetsView(QWidget *parent) : QOpenGLWidget(parent)
 {
+	QSurfaceFormat format;
+	format.setVersion(4, 1);
+	format.setProfile(QSurfaceFormat::CoreProfile);
+	format.setDefaultFormat(format);
+	this->setFormat(format);
 	timer = new QTimer();
 	connect(timer, SIGNAL(timeout()), this, SLOT(update()));
 
@@ -17,7 +22,6 @@ void PlanetsView::initializeGL()
 {
 	this->dayOfYear = 0;
 	this->hourOfDay = 0;
-
 	// Initialize QGLWidget (parent)
 	QOpenGLWidget::initializeGL();
 

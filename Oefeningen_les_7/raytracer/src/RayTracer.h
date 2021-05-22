@@ -32,6 +32,10 @@ public:
 	void SetScene(Scene* scene) { mSceneToTrace = scene; };
 	void GetFirstRay(Ray* newRay, double XPos, double YPos);
 	void TraceRay(Ray* ray, RGB_Color* color);
+	void AddAmbientComponent(RGB_Color* color, Shape* HitShape);
+	void AddLightComponent(RGB_Color* color, Shape* HitShape, ReturnObject* ReturnData);
+	bool InShadow(Vec3 TestPoint, Vec3 LightVector, double LightDistance);
+	Vec3 GetReflectedVector(Vec3 vector, Vec3 ReflectionNormal);
 
 public slots:
 	void slotRender();

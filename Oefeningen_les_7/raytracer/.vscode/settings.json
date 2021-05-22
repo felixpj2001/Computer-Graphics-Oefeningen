@@ -1,6 +1,5 @@
 {
     "cmake.sourceDirectory": "${workspaceFolder}/src",
-    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
     "files.associations": {
         "*.h": "cpp",
         "*.circ": "json",
@@ -19,6 +18,8 @@
         "string": "cpp",
         "string_view": "cpp",
         "unordered_map": "cpp",
-        "ranges": "cpp"
-    }
+        "ranges": "cpp",
+        "algorithm": "cpp"
+    },
+    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools"
 }

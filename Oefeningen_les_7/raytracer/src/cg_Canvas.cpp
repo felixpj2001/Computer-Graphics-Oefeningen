@@ -30,7 +30,7 @@ void cg_Canvas::PutPixel(int x, int y, RGB_Color color)
 	
 	if(Xpos >= 0 && Ypos >= 0 && Xpos < width() && Ypos < height())
 	{
-		uint c = QColor((int)color.r *255, (int)color.g * 255, (int)color.b * 255).rgb();
+		uint c = QColor(color.r *255, color.g * 255, color.b * 255).rgb();
 		image->setPixel(Xpos, Ypos, c);
 	}
 }

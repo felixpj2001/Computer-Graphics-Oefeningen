@@ -8,6 +8,7 @@ class PointLightList
 {
 public:
     std::vector<PointLight *> pointLights;
+    
     void DeleteAllLights()
     {
         PointLight *currentLight = nullptr;

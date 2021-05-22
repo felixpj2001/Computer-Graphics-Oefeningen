@@ -201,6 +201,9 @@ CMakeFiles/raytracer.dir/cg_Canvas.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/include/wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/include/_types/_wctrans_t.h \
   /usr/local/opt/qt/include/QtCore/qnumeric.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/cmath \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/math.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/include/math.h \
   /usr/local/opt/qt/include/QtCore/qversiontagging.h \
   /usr/local/opt/qt/include/QtGui/qtgui-config.h \
   /usr/local/opt/qt/include/QtWidgets/qtwidgets-config.h \
@@ -230,9 +233,6 @@ CMakeFiles/raytracer.dir/cg_Canvas.cpp.o: \
   /usr/local/opt/qt/include/QtCore/qlist.h \
   /usr/local/opt/qt/include/QtCore/qhashfunctions.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/numeric \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/cmath \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/math.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/include/math.h \
   /usr/local/opt/qt/include/QtCore/qiterator.h \
   /usr/local/opt/qt/include/QtCore/qbytearraylist.h \
   /usr/local/opt/qt/include/QtCore/qstringlist.h \

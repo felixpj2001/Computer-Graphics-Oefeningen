@@ -19,13 +19,15 @@ cg_MainWindow::cg_MainWindow()
 	Sphere* sphere = new Sphere();
 	sphere->SetPosition(Vec3(0.0, 0.0, 0.0));
 	sphere->SetVectors(Vec3(1.0, 0.0, 0.0), Vec3(0.0, 1.0, 0.0), Vec3(0.0, 0.0, 1.0));
-	sphere->SetColor(RGB_Color(1.0f, 0.0f, 0.0f));
-	sphere->radius = 10.0f;
+	sphere->SetColor(RGB_Color(1.0f, 1.0f, 1.0f));
+	sphere->radius = 9.0f;
 	mScene->shapelist.AddShape(sphere);
 
 	PointLight* pointLight = new PointLight();
-	pointLight->position = Vec3(20.0, 20.0, 0.0);
-	pointLight->color = RGB_Color(0.0, 0.0, 1.0f);
+	pointLight->position = Vec3(-150.0, 150.0, 150.0);
+	pointLight->color = RGB_Color(1.0f, 1.0f, 1.0f);
+	mScene->pointLightList.pointLights.push_back(pointLight);
+
 	m_RayTracer->SetScene(mScene);
 
 	connect(ui->pushButton_Save, SIGNAL(clicked()), ui->drawCanvas, SLOT(slotSaveImage()));

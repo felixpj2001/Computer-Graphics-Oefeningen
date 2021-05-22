@@ -26,8 +26,8 @@ CMAKE_BUILD_TYPE:STRING=Debug
 //Enable/Disable color output during build.
 CMAKE_COLOR_MAKEFILE:BOOL=ON
 
-//No help, variable specified on the command line.
-CMAKE_CXX_COMPILER:FILEPATH=/usr/bin/clang++
+//CXX compiler
+CMAKE_CXX_COMPILER:STRING=/usr/bin/clang++
 
 //Flags used by the CXX compiler during all build types.
 CMAKE_CXX_FLAGS:STRING=
@@ -44,8 +44,8 @@ CMAKE_CXX_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 //Flags used by the CXX compiler during RELWITHDEBINFO builds.
 CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
-//No help, variable specified on the command line.
-CMAKE_C_COMPILER:FILEPATH=/usr/bin/clang
+//C compiler
+CMAKE_C_COMPILER:STRING=/usr/bin/clang
 
 //Flags used by the C compiler during all build types.
 CMAKE_C_FLAGS:STRING=
@@ -214,6 +214,9 @@ OPENGL_gl_LIBRARY:FILEPATH=/Library/Developer/CommandLineTools/SDKs/MacOSX11.3.s
 
 //GLU library for OS X (usually same as OpenGL library)
 OPENGL_glu_LIBRARY:FILEPATH=/Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/OpenGL.framework
+
+//Additional directories where find(Qt6 ...) components are searched
+QT_ADDITIONAL_PACKAGES_PREFIX_PATH:STRING=
 
 //The directory containing a CMake configuration file for Qt6CoreTools.
 Qt6CoreTools_DIR:PATH=/usr/local/opt/qt/lib/cmake/Qt6CoreTools
@@ -509,6 +512,8 @@ QT_FEATURE_cxx17:INTERNAL=ON
 QT_FEATURE_cxx17_filesystem:INTERNAL=ON
 //Qt feature: cxx1z (from target Qt6::Core)
 QT_FEATURE_cxx1z:INTERNAL=ON
+//Qt feature: cxx20 (from target Qt6::Core)
+QT_FEATURE_cxx20:INTERNAL=OFF
 //Qt feature: cxx2a (from target Qt6::Core)
 QT_FEATURE_cxx2a:INTERNAL=OFF
 //Qt feature: datawidgetmapper (from target Qt6::Widgets)
@@ -751,12 +756,18 @@ QT_FEATURE_messagebox:INTERNAL=ON
 QT_FEATURE_mimetype:INTERNAL=ON
 //Qt feature: mimetype_database (from target Qt6::Core)
 QT_FEATURE_mimetype_database:INTERNAL=ON
+//Qt feature: mips_dsp (from target Qt6::Core)
+QT_FEATURE_mips_dsp:INTERNAL=OFF
+//Qt feature: mips_dspr2 (from target Qt6::Core)
+QT_FEATURE_mips_dspr2:INTERNAL=OFF
 //Qt feature: movie (from target Qt6::Gui)
 QT_FEATURE_movie:INTERNAL=ON
 //Qt feature: mtdev (from target Qt6::Gui)
 QT_FEATURE_mtdev:INTERNAL=OFF
 //Qt feature: multiprocess (from target Qt6::Gui)
 QT_FEATURE_multiprocess:INTERNAL=ON
+//Qt feature: neon (from target Qt6::Core)
+QT_FEATURE_neon:INTERNAL=OFF
 //Qt feature: network (from target Qt6::Core)
 QT_FEATURE_network:INTERNAL=ON
 //Qt feature: opengl (from target Qt6::Gui)

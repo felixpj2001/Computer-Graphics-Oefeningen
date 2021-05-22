@@ -200,6 +200,9 @@ CMakeFiles/raytracer.dir/main.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/include/wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/include/_types/_wctrans_t.h \
   /usr/local/opt/qt/include/QtCore/qnumeric.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/cmath \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/math.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/include/math.h \
   /usr/local/opt/qt/include/QtCore/qversiontagging.h \
   /usr/local/opt/qt/include/QtGui/qtgui-config.h \
   /usr/local/opt/qt/include/QtWidgets/qtwidgets-config.h \
@@ -229,9 +232,6 @@ CMakeFiles/raytracer.dir/main.cpp.o: \
   /usr/local/opt/qt/include/QtCore/qlist.h \
   /usr/local/opt/qt/include/QtCore/qhashfunctions.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/numeric \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/cmath \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/math.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/include/math.h \
   /usr/local/opt/qt/include/QtCore/qiterator.h \
   /usr/local/opt/qt/include/QtCore/qbytearraylist.h \
   /usr/local/opt/qt/include/QtCore/qstringlist.h \
@@ -343,4 +343,6 @@ CMakeFiles/raytracer.dir/main.cpp.o: \
   /Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_7/raytracer/src/Shape.h \
   /Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_7/raytracer/src/Vec3.h \
   /Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_7/raytracer/src/ray.h \
-  /Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_7/raytracer/src/returnObject.h
+  /Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_7/raytracer/src/returnObject.h \
+  /Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_7/raytracer/src/pointLightList.h \
+  /Users/pieter-janvanoppen/Documents/Documenten/School/2020-2021/CG/Computer-Graphics-Oefeningen/Oefeningen_les_7/raytracer/src/pointLight.h

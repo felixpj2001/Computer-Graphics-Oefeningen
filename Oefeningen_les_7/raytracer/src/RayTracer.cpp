@@ -52,7 +52,7 @@ void RayTracer::TraceView()
 			{
 				RGB_Color Pixelcolor = RGB_Color(0, 0, 0); //AANPASSEN!
 
-				Ray* ray = new Ray{};
+				Ray *ray = new Ray{};
 				GetFirstRay(ray, x, y);
 				TraceRay(ray, &Pixelcolor);
 
@@ -91,11 +91,49 @@ void RayTracer::GetFirstRay(Ray *newRay, double XPos, double YPos)
 
 void RayTracer::TraceRay(Ray *ray, RGB_Color *color)
 {
-	ReturnObject *returnedObject = new ReturnObject{};
+	ReturnObject *returnedObject = new ReturnObject();
 	Shape *shape = mSceneToTrace->shapelist.GetNearestIntersection(ray, returnedObject);
 	if (shape)
 	{
-		RGB_Color rgb = RGB_Color(shape->GetColor());
-		color->SetRGB(rgb.r, rgb.g, rgb.b);
+		AddAmbientComponent(color, shape);
+		AddLightComponent(color, shape, returnedObject);
+		color->RespectBoundaries();
 	}
+}
+
+void RayTracer::AddAmbientComponent(RGB_Color *color, Shape *HitShape)
+{
+	color->r = mSceneToTrace->ambientIntensity.r * HitShape->m_Ka * HitShape->GetColor().r;
+	color->g = mSceneToTrace->ambientIntensity.g * HitShape->m_Ka * HitShape->GetColor().g;
+	color->b = mSceneToTrace->ambientIntensity.b * HitShape->m_Ka * HitShape->GetColor().b;
+}
+
+void RayTracer::AddLightComponent(RGB_Color *color, Shape *HitShape, ReturnObject *ReturnData)
+{
+	for (PointLight *pointLight : mSceneToTrace->pointLightList.pointLights)
+	{
+		Vec3 lightVector = ReturnData->mIntersectionPoint - pointLight->position;
+		Vec3 viewVector = ReturnData->mIntersectionPoint - mSceneToTrace->eyePoint;
+		lightVector.Normalize();
+		viewVector.Normalize();
+		float dotProduct = max(0.0f, ReturnData->mNormal * lightVector);
+		float d = pointLight->position.DistanceTo(ReturnData->mIntersectionPoint);
+		float att = min(1 / (pointLight->c1 + (pointLight->c2 * d) + (pointLight->c3 * d * d)), 1.0f);
+		Vec3 reflecitionVector = GetReflectedVector(lightVector, ReturnData->mNormal);
+		float dotReflect = max(0.0f, reflecitionVector * viewVector);
+		color->r += att * pointLight->color.r * ((HitShape->m_Kd * HitShape->GetColor().r * dotProduct) + (HitShape->m_Ks * HitShape->m_SpecularColor.r * pow(dotReflect, HitShape->m_HotSpotExponent)));
+		color->g += att * pointLight->color.g * ((HitShape->m_Kd * HitShape->GetColor().g * dotProduct) + (HitShape->m_Ks * HitShape->m_SpecularColor.g * pow(dotReflect, HitShape->m_HotSpotExponent)));
+		color->b += att * pointLight->color.b * ((HitShape->m_Kd * HitShape->GetColor().b * dotProduct) + (HitShape->m_Ks * HitShape->m_SpecularColor.b * pow(dotReflect, HitShape->m_HotSpotExponent)));
+	}
+}
+
+bool RayTracer::InShadow(Vec3 TestPoint, Vec3 LightVector, double LightDistance)
+{
+	return false;
+}
+
+Vec3 RayTracer::GetReflectedVector(Vec3 vector, Vec3 ReflectionNormal)
+{
+	ReflectionNormal.Normalize();
+	return vector - ReflectionNormal * 2 * (vector * ReflectionNormal);
 }

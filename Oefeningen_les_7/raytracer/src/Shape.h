@@ -23,6 +23,11 @@ public:
     void SetUpVector(Vec3 Up);
     void SetVectors(Vec3 X, Vec3 Y, Vec3 Z);
     RGB_Color GetColor();
+    float m_Ka = 0.1f;
+    float m_Kd = 0.45f;
+    float m_Ks = 0.5f;
+    int m_HotSpotExponent = 10;
+    RGB_Color m_SpecularColor{1.0f, 1.0f, 1.0f};
 
     // constructor & destructor
     Shape();
